@@ -24,6 +24,8 @@ require("./src/startup/logging")();
 require("./src/routes/route")(app);
 app.use(error);
 require("./src/startup/db")();
+require("./src/startup/prod")(app);
+
 //access public folder
 app.use("/public", express.static("public"));
 
